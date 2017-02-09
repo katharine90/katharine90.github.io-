@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Facebookcopy</title>
+    <style>
+        p{
+            margin-top: -15px;
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+<div>
+    <h1>Facebookcopy</h1>
+</div>
+<header>   
+<!-- Header taggen brukar vanligast befinna sig först i ordning på sidan, den innehåller företagets ikon som oftast är länkad till hem/startsidan,
+den innehåller även dem viktigaste och mest använda länkar av besökare såsom: service, om oss, kontakt mm. Väldigt sällan finns det fall där man använder denna tag flera      gånger för att slippa blanda ihop vilken header man senare jobbar med eller stylar med css. Finns det flera header-liknande element brukar man använda en div med class header (<div class="header"></div>) för att skilja dessa åt. -->
+    <nav>
+<!-- Navigation taggen innehåller oftast länkar eller listor-->
+    <a href="#home">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="#Settings">Settings</a>
+    </nav>
+    </header>
+
+<hr>
+
+<main> 
+<!-- Main taggen (ibland även skriven som <div id="main"></div>) brukar stå för huvudinnehållet på sidan. Innanför main taggarna befinner sig andra divar och semantiska          element-->   
+    <article>  
+<!-- Article omfamnar det första inlägget, det gör så att headern med namnet på användaren och titeln håller ihop med pharagraph taggarna så att dessa skapar en              helhet. Finns inte denna div kommer paragraph innehållet flyta ut i main taggen och vara svårare att grupera och hantera i exempelvis responsiv läge. -->
+        
+    <div class="subject">
+<!-- Diven subject står för beskrivningen av ämnet i våran article tagg. Den innehåller namnet på användaren, tiden och datumet på inlägget och under rubriken -->
+        <h2>MusikLover56's status</h2>
+        <p><strong>Har "We are the champions - Queen" gjorts om!? &#128347; <time>2010-02-07 10:32</time></strong></p>
+    </div>
+    <p>
+        Jag lyssnade på låten We are the Champions by Queen häromdagen och sjöng med, men när dem sjöng "No time for losers, cause we are the Champions" så avslutade jag stycket med "... of the world" men det gjorde dem inte låten, har den gjorts om?? är säker på att "of the world" ska vara med!
+    </p>
+    </article>
+    
+    <section>  
+<!-- För kommentar sectionen kan vi använda taggen section-->
+        <h3>Comments</h3>
+        <div class="comment">
+<!-- Diven comment omfamnar en kommentar av en specifik användare, dess namn och tiden då inlägget har blivit upplagt. -->
+            <div class="header">
+<!-- Denna div heter header. Eftersom detta element kommer att användas flera gånger använder jag en klass. Idetta fall är inte denna header samma som semantiska elementetet högst uppe på sidan. Just därför kan inte den användas igen eftersom dem inte utför samma funktion i längden.-->
+                <h4>Cat_trainer31's post:</h4>
+            </div>
+            <p>
+                Du har nog fel.. lyssna om &#128347; <time>2010-02-07 20:59</time>
+                
+            </p>
+        </div>
+        
+        <div class="comment">
+            <div class="header">
+                <h4>Realist11's post:</h4>
+            </div>
+            <p>
+                Du har upptäckt Mandela effecten, läs mer här <a href="https://www.buzzfeed.com/christopherhudspeth/crazy-examples-of-the-mandela-effect-that-will-make-you-ques?utm_term=.jqwGYwq6v1#.qePa790Nvl">Mandela effecten</a> &#128347; <time>2010-02-08 05:37</time>
+            </p>
+        </div>
+        
+    </section>
+</main>
+
+<hr>
+
+    
+<footer>
+<!--Footer befinner sig sist i ordning på sidan, det är den avslutande taggen. Footer taggen innehåller övriga länkar, kontakt information och copyright information -->
+    <small>This has nothing to do with the real Facebook other than showing a simple HTML element semantic example with the use of a typical facebook post entry <br>
+    <a href="https://www.facebook.com/">Click here to find the original facebook</a></small>
+    </footer>
+</body>
+</html>
