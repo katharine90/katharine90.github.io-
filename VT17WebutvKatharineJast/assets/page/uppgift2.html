@@ -30,13 +30,12 @@ den innehåller även dem viktigaste och mest använda länkar av besökare sås
 <main> 
 <!-- Main taggen (ibland även skriven som <div id="main"></div>) brukar stå för huvudinnehållet på sidan. Innanför main taggarna befinner sig andra divar och semantiska          element-->   
     <article>  
-<!-- Article omfamnar det första inlägget, det gör så att headern med namnet på användaren och titeln håller ihop med pharagraph taggarna så att dessa skapar en              helhet. Finns inte denna div kommer paragraph innehållet flyta ut i main taggen och vara svårare att grupera och hantera i exempelvis responsiv läge. -->
+<!-- Article omfamnar det första inlägget, det gör så att headern med namnet på användaren och titeln håller ihop med pharagraph taggarna så att dessa skapar en helhet. Finns inte denna div kommer paragraph innehållet flyta ut i main taggen och vara svårare att grupera och hantera i exempelvis responsiv läge. -->
         
-    <div class="subject">
-<!-- Diven subject står för beskrivningen av ämnet i våran article tagg. Den innehåller namnet på användaren, tiden och datumet på inlägget och under rubriken -->
+    <header>
         <h2>MusikLover56's status</h2>
         <p><strong>Har "We are the champions - Queen" gjorts om!? &#128347; <time>2010-02-07 10:32</time></strong></p>
-    </div>
+    </header>
     <p>
         Jag lyssnade på låten We are the Champions by Queen häromdagen och sjöng med, men när dem sjöng "No time for losers, cause we are the Champions" så avslutade jag stycket med "... of the world" men det gjorde dem inte låten, har den gjorts om?? är säker på att "of the world" ska vara med!
     </p>
@@ -47,10 +46,9 @@ den innehåller även dem viktigaste och mest använda länkar av besökare sås
         <h3>Comments</h3>
         <div class="comment">
 <!-- Diven comment omfamnar en kommentar av en specifik användare, dess namn och tiden då inlägget har blivit upplagt. -->
-            <div class="header">
-<!-- Denna div heter header. Eftersom detta element kommer att användas flera gånger använder jag en klass. Idetta fall är inte denna header samma som semantiska elementetet högst uppe på sidan. Just därför kan inte den användas igen eftersom dem inte utför samma funktion i längden.-->
+            <footer>
                 <h4>Cat_trainer31's post:</h4>
-            </div>
+            <footer>
             <p>
                 Du har nog fel.. lyssna om &#128347; <time>2010-02-07 20:59</time>
                 
@@ -58,9 +56,9 @@ den innehåller även dem viktigaste och mest använda länkar av besökare sås
         </div>
         
         <div class="comment">
-            <div class="header">
+            <footer>
                 <h4>Realist11's post:</h4>
-            </div>
+            </footer>
             <p>
                 Du har upptäckt Mandela effecten, läs mer här <a href="https://www.buzzfeed.com/christopherhudspeth/crazy-examples-of-the-mandela-effect-that-will-make-you-ques?utm_term=.jqwGYwq6v1#.qePa790Nvl">Mandela effecten</a> &#128347; <time>2010-02-08 05:37</time>
             </p>
