@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body class="container">
+
+<h1 class="container__title">A Simple Calculator</h1>
+
+<aside class="resultBlock">
+	<h2 class="resultBlock__title">Results</h2>
+	<ul id="results" class="resultBlock__list"></ul>
+</aside>
+
+<div id="calculator" class="calc">
+	<span id="result" class="calc__display">0</span>
+    <span class="calc__number" onclick="document.getElementById('result').innerHTML += '0'">0</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '1'">1</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '2'">2</span><br>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '3'">3</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '4'">4</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '5'">5</span><br>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '6'">6</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '7'">7</span>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '8'">8</span><br>
+	<span class="calc__number" onclick="document.getElementById('result').innerHTML += '9'">9</span><br>
+	<span class="calc__sign" onclick="addition()" >+</span>
+	<span class="calc__sign" onclick="subtraction()">-</span>
+	<div class="calc__sign" onclick="calc()" >=</div>
+</div>
+
+<script type="text/javascript">
+    var i, pressed;
+    var arr = [];
+    var buttons = document.getElementsByTagName("span");
+    var results = document.getElementById("results");
+    var mainBox = document.getElementById("result");
+    
+    function getAddSum(total, num) {
+    return total + num;
+    }
+    
+    for(i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("click", function(e){
+          
+    pressed = e.target.innerHTML;
+    arr.push(pressed);
+    console.log(arr);
+    });
+    }
+       
+    function addition(){
+    document.getElementById('result').innerHTML += '+';
+    }
+    
+    function subtraction(){
+    document.getElementById('result').innerHTML += '-';
+    }
+    
+    function calc(){
+        try{
+    var sum = eval(arr.reduce(getAddSum));
+        }catch(error){
+        results.innerHTML = "Error, invalid input - "
+        }
+    console.log("Eval: " + sum);
+    result.innerHTML = "";
+    results.innerHTML += sum + " ";
+    sum = 0;
+    arr.length = 0;
+    }
+
+    </script>
+</body>
+</html>
