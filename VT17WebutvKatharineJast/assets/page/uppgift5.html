@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Hello world pages">     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX testing</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+        <script type="text/javascript">
+            
+
+            var userInput = prompt("Ange personnummer: YYMMDDXXXX");
+            var i, sum, sum2, numbers, numToString, finalSum;
+            var secretNumber = 0;
+            var count = 0;
+            var nr = [];
+            var onesAndtwos = [];
+                 
+
+            var input = userInput.split("");
+            var myFunction = function(personNummer){                   
+
+                
+                if(input.length == 0){
+                document.write("Error, empty field");
+                }
+                if(input.length == 12){
+                input.shift();
+                input.shift();
+                }
+                secretNumber = input[input.length - 1];
+
+                for(i = 0; i < input.length - 1; i++){
+                if(i %2 === 0){ // 2
+                onesAndtwos[i] = input[i] * 2;                    
+                }else{   // 1
+                onesAndtwos[i] = input[i] * 1;             
+                }           
+                    
+                }  
+                        
+                for(i = 0; i < onesAndtwos.length; i++){
+                numToString = onesAndtwos[i].toString();
+                    if(numToString.length == 2){
+                    count++;
+                    nr.push(numToString);
+                    }
+                }   
+                                
+            }   
+            
+            myFunction(input);
+            
+            function getSum(total, num) {
+            return total + num;
+            }
+            
+            sum = onesAndtwos.reduce(getSum);
+            sum2 = nr.reduce(getSum);
+            finalSum =  sum - (10 * count) + count;
+
+            var check = finalSum%10;
+            var check2 = 10 - check;
+            
+            if(check2 == secretNumber){
+            document.write("Rätt personnummer!" + "\n");
+            }else{
+            document.write("Fel personnummer!" + "\n");
+            }
+            
+            /* -------------- skottår -------------- */
+            
+             var yearInput = prompt("Ange år");
+             var year = parseInt(yearInput);
+             
+            if(year%4 == 0 || year% 400 == 0){
+            document.write(year + " är ett skottår. ");
+            }else if(year% 100 == 0){
+            documnet.write(year + " är inte ett skottår. ");
+            }else{
+            document.write(year + " är inte ett skottår. ");
+            }
+            
+            /*-------------- beräkna siffersumman ------------- */
+            
+            var userNumber = prompt("Ange en siffra");
+            var num = userNumber.split("").map(Number);
+            
+            function getTotalSum(add, next) {
+            return add + next;
+            }
+
+            var totalSum = num.reduce(getTotalSum);
+            document.write("Summan av " + userNumber + " är " + totalSum);
+            
+            
+              
+        </script>
+    </head>
+    <body>
+
+        
+        <footer>
+        </footer>
+        
+    </body>
+</html>
