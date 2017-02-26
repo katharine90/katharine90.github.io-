@@ -63,7 +63,9 @@
             var check = finalSum%10;
             var check2 = 10 - check;
             
-            if(check2 == secretNumber){
+            if(input.length <= 8){
+            document.write("Fel personnummer!" + "\n");
+            }else if(check2 == secretNumber){
             document.write("Rätt personnummer!" + "\n");
             }else{
             document.write("Fel personnummer!" + "\n");
