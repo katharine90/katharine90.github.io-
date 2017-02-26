@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Hello world pages">     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recept - pankakor</title>
+        <link href="pankakor.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
+        <script type="text/javascript" src="pan-script.js">   
+        </script>     
+    </head>
+    <body id="recept-bg">
+       <header> <h1>Recept - pankakor</h1>
+        <nav><a href="pankakor-index.html">Gå tillbaks till startsidan</a></nav>
+        </header>
+       <main>
+        <aside>
+        <h2>Ingredenser</h2>
+        <h5>Välj antal pankakor  
+        <select id="selectValue">
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+  <option value="40">50</option>
+        </select>            
+        <button onclick="getSelected()">Hämta  mått!</button></h5>
+        <ul>
+        <li><span>3</span> ägg</li>
+        <li><span>6</span> dl mjölk</li>
+        <li><span>2</span> dl vetemjöl</li>
+        <li><span>1</span> tsk salt</li>
+        <li><span>2</span> msk smör</li>
+            </ul>
+        </aside>
+           
+        <section>
+        <img  class="recept-img" alt="pankakor" src="https://www.landleyskok.se/wp-content/uploads/2014/08/pannkakor4.jpg">
+        <h2>Så här gör du</h2>
+        <header id="stars" onmouseleave="quitCount()">
+        <h4 onmouseover="runCount(1)" >★</h4>
+        <h4 onmouseover="runCount(2)" >★</h4>
+        <h4 onmouseover="runCount(3)" >★</h4>
+        <h4 onmouseover="runCount(4)" >★</h4>
+        <h4 onmouseover="runCount(5)" >★</h4>
+            </header>
+        <ol>
+        <li>Vispa samman äggen med hälften av mjölken.</li>
+        <li>Tillsätt mjölet och vispa till en klimpfri smet. Vispa i resten av mjölken och saltet.</li>
+        <li>Smält smöret och vispa ner i smeten. Du behöver då inte använda extra fett vid gräddningen.</li>
+        <li>Hetta upp laggen. Häll i ett tunt lager smet. När ytan stelnat och blivit matt är det dags att vända pannkakan eller plättarna. Stek i ytterligare någon minut.</li>
+        </ol>
+        </section>
+        
+        
+        </main>
+
+        <footer>
+        </footer>
+        </body>
+</html>
