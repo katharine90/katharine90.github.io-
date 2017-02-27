@@ -88,6 +88,14 @@
             }
             }
             
+                        function setup(){
+            loadJSON("https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor", gotData, 'jsonp');
+            }
+            
+            function gotData(data){
+            document.write(data);
+            }
+            
             /*------- review function -------*/
             
            function runCount(count){
