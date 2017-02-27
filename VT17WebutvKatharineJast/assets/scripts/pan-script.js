@@ -17,6 +17,21 @@ var i, x, count, selected, divided;
                              }
                 
             }
+
+
+          function ajaxFunction(){
+            var xhttp = new XMLHttpRequest();
+            Xhttp.onreadystatechange = function(){
+            if(this.readeState == 4 && this.status == 200){
+            console.log(JSON.parse(this.responseText));
+            }
+            }
+            
+            xhttp.open("GET",
+            "https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor&rating=4", true);
+                xhttp.send();
+            
+            }
             
             /*------- review function -------*/
             
