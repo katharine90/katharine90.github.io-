@@ -98,3 +98,13 @@ padding:5px 2px;
 .recept-img{
 width: 500px;
 }
+
+#ratings {
+    padding: 20px 0px;
+    font-family: 'Josefin Slab', serif;
+}
+
+img#loader{
+width: 50px;
+height: 50px;
+}
