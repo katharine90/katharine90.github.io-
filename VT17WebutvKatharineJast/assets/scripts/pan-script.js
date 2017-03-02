@@ -3,43 +3,44 @@
             var stars = document.getElementsByTagName("h4");
             var displayDigits = document.getElementsByTagName("span");
             var ratingsBox = document.getElementById("ratings");
+            var loadImg = document.getElementById("loader");
 
             
             /*------- review function -------*/
             
             
             function updateRating(rating) {
+            loadImg.style.visibility="visible";
+            //console.log(loadImg.style.visibility);
+                
             var myApi = new XMLHttpRequest();
             myApi.onreadystatechange = function() {
-            $(document).ajaxStart(function(){
-            $("#loader").css("display", "block");
-            });
             if (this.readyState == 4 && this.status == 200) {
             console.log(JSON.parse(this.responseText));
             }
             };
             myApi.open("GET", 
-            "https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor&rating=" + rating, false);
+            "https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor&rating=" + rating, true);
             myApi.send();
             }
             
+            var r;
             
             function updateView() {
             var myApi = new XMLHttpRequest();
             myApi.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(this.responseText));
+            //console.log(JSON.parse(this.responseText));
+            r  = JSON.parse(myApi.responseText);
+            var dis = "Recept: " + r.recipe + ", röster: " + r.votes + ", rating: " +    r.rating;
+            ratings.innerHTML = dis; 
             }
             };
             myApi.open("GET", 
-            "https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor", false);
+            "https://edu.oscarb.se/sjk15/api/recipe/?api_key=9cf15f843bb44165&recipe=pankakor", true);
             myApi.send();
-            
-            var r = JSON.parse(myApi.response);
-            var dis = "Recept: " + r.recipe + ", röster: " + r.votes + ", rating: " +    r.rating;
-            console.log(dis); 
-            ratings.innerHTML = dis; 
             }
+                        
                         
 
            function runCount(count){
